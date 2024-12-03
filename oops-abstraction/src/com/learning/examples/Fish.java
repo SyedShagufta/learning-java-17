@@ -10,18 +10,20 @@ public class Fish extends Animal{
     @Override
     public void move(String speed) {
         if(speed.equalsIgnoreCase("slow")){
-            System.out.println(type+" swimming peacefully");
+            System.out.println(getExplicitType()+" swimming peacefully");
+            //System.out.println(type+" swimming peacefully");
         }else{
-            System.out.println(type + " darting frightened");
+            System.out.println(getExplicitType()+" darting frightened");
+            //System.out.println(type + " darting frightened");
         }
     }
 
     @Override
     public void makeNoise() {
         if(type=="Goldfish"){
-            System.out.println("Splash !!");
+            System.out.print("Splash !!");
         }else{
-            System.out.println("Shush !!");
+            System.out.print("Shush !!");
         }
     }
 }

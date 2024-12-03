@@ -14,13 +14,17 @@ public class Main {
 
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(dog);
-        animals.add(new Dog("German Shephard", "big", 150));
+        animals.add(new Dog("German Shepherd", "big", 150));
         animals.add(new Fish("Goldfish", "small", 1));
         animals.add(new Fish("Barracuda", "big", 75));
         animals.add(new Dog("Pug", "small", 20));
+        animals.add(new Horse("Clydesdale", "large", 1000));
 
         for(var animal : animals){
             doAnimalStuff(animal);
+            if(animal instanceof Mammal currentMammal){
+                currentMammal.shedHair();
+            }
         }
 
     }
