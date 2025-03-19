@@ -3,6 +3,7 @@ package com.java.encapsulationChallenge;
 public class BankAccountMain {
 
     public static void main(String[] args) {
+
         BankAccount myAcc = new BankAccount();
         myAcc.setAccountNumber(123456789);
         myAcc.setCustomerName("Sofia");

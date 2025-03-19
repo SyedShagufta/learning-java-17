@@ -8,6 +8,23 @@ public class BankAccount {
     private String email;
     private long phoneNumber;
 
+    // creating constructors
+
+    public BankAccount(long accountNumber, float accountBalance, String customerName, String email, long phoneNumber) {
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public BankAccount() {
+    }
+
+    public BankAccount(long accountNumber, String customerName) {
+        this(accountNumber, 0, customerName, "default@email.com", 0);
+    }
+
     // creating getters and setters for the above fields
 
     public long getAccountNumber() {
