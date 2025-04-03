@@ -1,5 +1,8 @@
 package com.java.inheritance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -10,10 +13,17 @@ public class Main {
         doAnimalStuff(dog, "fast");
 
         Dog yorkie = new Dog("Yorkie", 65);
-        doAnimalStuff(yorkie, "Slow");
+        doAnimalStuff(yorkie, "fast");
 
         Dog retriever = new Dog("Labrador Retriever", 65, "Floppy", "Swimmer");
         doAnimalStuff(retriever, "slow");
+
+        Dog wolf = new Dog("wolf", 65);
+        doAnimalStuff(wolf, "slow");
+
+        Fish goldie = new Fish("Goldfish", 0.25, 2, 3);
+        doAnimalStuff(goldie, "fast");
+
     }
 
     public static void doAnimalStuff(Animal animal, String speed){

@@ -1,5 +1,7 @@
 package com.java.inheritance;
 
+import java.util.Objects;
+
 public class Dog extends Animal{
 
     private String earShape;
@@ -20,6 +22,32 @@ public class Dog extends Animal{
     }
 
     @Override
+    public void makeNoise() {
+        if(Objects.equals(type, "wolf")){
+            System.out.println("woof");
+        }
+        else{
+            System.out.println("Bow bow");
+        }
+    }
+
+    private void bark(){
+        System.out.println("Dog is barking");
+    }
+
+    private void run(){
+        System.out.println("Dog is running !");
+    }
+
+    private void walk(){
+        System.out.println("Dog is walking");
+    }
+
+    private void wagTail(){
+        System.out.println("wagging the tail");
+    }
+
+    @Override
     public String toString() {
         return "Dog{" +
                 "earShape='" + earShape + '\'' +
@@ -30,6 +58,13 @@ public class Dog extends Animal{
     @Override
     public void move(String speed) {
         super.move(speed);
-        System.out.println("This is from the Dog's class");
+        if(Objects.equals(speed, "slow")){
+            walk();
+            wagTail();
+        }
+        else{
+            run();
+            bark();
+        }
     }
 }
