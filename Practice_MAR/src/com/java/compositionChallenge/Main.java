@@ -10,7 +10,8 @@ public class Main {
         DishWasher dishWasher = new DishWasher();
         Refrigerator refrigerator = new Refrigerator();
 
-        SmartKitchen myKitchen = new SmartKitchen(coffeeMaker, dishWasher, refrigerator);
+//        SmartKitchen myKitchen = new SmartKitchen(coffeeMaker, dishWasher, refrigerator);
+          SmartKitchen myKitchen = new SmartKitchen();
 
         myKitchen.setKitchenState(true, true, true);
         myKitchen.getBrewMaster().brewCoffee();

@@ -6,6 +6,12 @@ public class SmartKitchen {
     private DishWasher dishWasher;
     private Refrigerator iceBox;
 
+    public SmartKitchen() {
+        brewMaster = new CoffeeMaker();
+        dishWasher = new DishWasher();
+        iceBox = new Refrigerator();
+    }
+
     public SmartKitchen(CoffeeMaker brewMaster, DishWasher dishWasher, Refrigerator iceBox) {
         this.brewMaster = brewMaster;
         this.dishWasher = dishWasher;
@@ -59,9 +65,13 @@ class Refrigerator {
     public void orderFood(){
         if(hasWorkToDo) {
             System.out.println("Ordering food");
+            hasWorkToDo=false;
         }
     }
 
+    public void setHasWorkToDo(boolean hasWorkToDo) {
+        this.hasWorkToDo = hasWorkToDo;
+    }
 }
 
 class DishWasher {
@@ -70,7 +80,12 @@ class DishWasher {
     public void doDishes(){
         if(hasWorkToDo) {
             System.out.println("Do dishes");
+            hasWorkToDo=false;
         }
+    }
+
+    public void setHasWorkToDo(boolean hasWorkToDo) {
+        this.hasWorkToDo = hasWorkToDo;
     }
 }
 
@@ -80,6 +95,11 @@ class CoffeeMaker {
     public void brewCoffee(){
         if(hasWorkToDo) {
             System.out.println("Brewing coffee");
+            hasWorkToDo=false;
         }
+    }
+
+    public void setHasWorkToDo(boolean hasWorkToDo) {
+        this.hasWorkToDo = hasWorkToDo;
     }
 }
