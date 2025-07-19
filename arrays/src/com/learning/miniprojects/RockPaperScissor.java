@@ -42,6 +42,7 @@ public class RockPaperScissor {
         if(userChoice.equalsIgnoreCase(compChoice)){
             System.out.println("It's a tie");
             System.out.println("You = 0, Computer = 0");
+            displayScore();
         }else if("rock".equalsIgnoreCase(userChoice) && "paper".equalsIgnoreCase(compChoice)  || "paper".equalsIgnoreCase(userChoice) &&  "rock".equalsIgnoreCase(compChoice)){
             if("paper".equalsIgnoreCase(userChoice)){
                 userScore++;
