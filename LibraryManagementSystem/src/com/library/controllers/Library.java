@@ -121,7 +121,7 @@ public class Library {
         // searching the inventory
         for(Book book: inventory)
         {
-            if(book.author().equalsIgnoreCase(author) || book.author().contains(author)){
+            if(book.author().equalsIgnoreCase(author) || book.author().toLowerCase().contains(author.toLowerCase())){
                 booksMatchByAuthor.add(book);
             }
         }
