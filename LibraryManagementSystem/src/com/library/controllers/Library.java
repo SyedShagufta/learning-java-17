@@ -106,7 +106,7 @@ public class Library {
         // searching the inventory
         for(Book book: inventory)
         {
-            if(book.title().equalsIgnoreCase(title) || book.title().contains(title)){
+            if(book.title().equalsIgnoreCase(title) || book.title().toLowerCase().contains(title.toLowerCase())){
                booksMatchByTitle.add(book);
             }
         }
